@@ -1,0 +1,233 @@
+* {
+    font-family: "Bradley Hand";
+}
+
+* {
+    box-sizing: border-box;
+}
+
+
+html {
+    min-height: 100vh;
+}
+
+body {
+    margin: 0;
+    background: radial-gradient(rgb(42, 41, 41), GRAY)
+}
+
+.page-title {
+    color: black;
+    font-family: monospace;
+    font-weight: normal;
+    text-align: center;
+    font-size: 5em;
+}
+
+.game-info {
+    color: black;
+    font-size: 2em;
+    justify-content: space-between;
+
+}
+
+
+
+
+
+
+
+
+
+.game-info-container {
+    grid-column: 1/-1;
+    display: flex;
+    justify-content: space-between;
+    margin: 50px;
+
+
+}
+
+
+.game-container {
+    display: grid;
+    grid-template-columns: repeat(6, auto);
+    grid-gap: 10px;
+    margin: 50px;
+    justify-content: center;
+    row-gap: 50px;
+    perspective: 500px;
+
+
+}
+
+.banner {
+    display: inline;
+    margin-left: auto;
+    margin-right: auto;
+    width: 600px;
+}
+
+.button {
+    color: white;
+    display: inline-block;
+    font-size: 20px;
+    transition-duration: .5s;
+}
+
+.startButton:hover {
+    background-color: rgb(107, 15, 15);
+
+}
+
+.instructionsButton:hover {
+    background-color: rgb(107, 15, 15);
+
+}
+
+.grid {
+    max-width: 960px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.card {
+    background: rgb(107, 15, 15);
+    /* background: transparent; */
+    height: 150px;
+    width: 250px;
+    transform: scale(1);
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform .5s;
+    margin: 5px;
+}
+
+.card,
+.back,
+.front {
+    height: 150px;
+    width: 150px;
+}
+
+.back,
+.front {
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+.front {
+    z-index: 2;
+    background: rgb(107, 15, 15) url('./images/eyez.jpeg') no-repeat center center / contain;
+}
+
+.back {
+    transform: rotateY(180deg);
+    background-color: transparent;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.selected {
+    transform: rotateY(180deg);
+}
+
+.match .front {
+    /* background: #6589F9 !important; */
+    background: transparent;
+}
+
+#memory--end-game-modal .wrapper {
+    background-color: rgba(0, 0, 0, .86);
+    text-align: center;
+    color: #ccc;
+    padding: 8px 0;
+}
+
+#memory--end-game-modal h2,
+#memory--end-game-modal h3 {
+    margin: 0;
+    margin-bottom: 4px;
+}
+
+.modal {
+    position: fixed;
+    height: 90%;
+    right: 0;
+    top: 0;
+    z-index: 3;
+    width: 100%;
+    visibility: hidden;
+    opacity: 0;
+    -webkit-transition: opacity 0.4s linear;
+    -moz-transition: opacity 0.4s linear;
+    -ms-transition: opacity 0.4s linear;
+    -o-transition: opacity 0.4s linear;
+    transition: opacity 0.4s linear;
+}
+
+.modal.show {
+    visibility: visible;
+    opacity: 1;
+}
+
+.valign-table {
+    display: table;
+    table-layout: fixed;
+}
+
+.valign-cell {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.memory--settings-label {
+    margin: 8px 0;
+}
+
+#memory--settings-grid,
+#memory--settings-reset {
+    width: 100%;
+    margin-bottom: 16px;
+    font-size: 18px;
+    background: transparent;
+    color: #ccc;
+    height: 50px;
+    text-align: center;
+}
+
+#name{
+    width:100%;
+    margin-bottom:16px;
+    font-size:18px;
+    background:transparent;
+    color:#ccc;
+    height:50px;
+    text-align: center;
+  }
+  
+  #memory--settings-grid option {
+    padding-top:5px;
+    padding-bottom:5px;
+  }
+  
+  #memory--settings-reset {
+    border-radius:5px;
+    border:2px solid #ccc;
+    cursor: pointer;
+  }
+
+  #memory--settings-modal {
+    background-color: rgba(0, 0, 0, .86);
+    z-index: 4;
+  }
+  #memory--settings-modal form {
+    min-width:240px;
+    width:50%;
+    margin:0 auto;
+    text-align: center;
+    color:#ccc;
+  }

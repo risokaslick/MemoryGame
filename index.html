@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <link rel="stylesheet" href="styler.css">
+    <title>Remember the Tile</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+</head>
+
+<body>
+
+    <h1 class="page-title"> Remember the Tile </h1>
+    <audio controls autoplay loop id="myAudio">
+        <source src="./music/RTT.mp3" type="audio/mpeg">
+       
+        Your browser does not support the audio element.
+      </audio>
+    <div class="banner ">
+       
+        <img src="https://www.rockofftrade.com/assets/Image/pictures/M%20-%20Artists%20or%20Brands/Michael%20Jackson/Michael-Jackson-Artists-Page-Banner-December-2019.jpg"
+            alt="MJ" width="1000px">
+
+           
+    </div>
+    <div class="game-container">
+        <div class="game-info-container">
+            <div class="game-info">
+                Timer: <span id="timeLeft"></span>
+                <p id="player-name"></p>
+            </div>
+            <div class="game-info">
+                <button type="button" id="startButton" class="startButton" onclick="startGame()">Start</button>
+                <button onclick="showInfo()" type="button" class="instructionsButton">Instructions</button>
+                <button onclick="showSettings()" type="button" class="startButton">Game Mode</button>
+                
+                <div id="myDIV"> Find all matching pairs before time runs out!</div>
+            </div>
+        </div>
+        <div id="game">
+            <!-- <div class="cards">
+        <img class="front-face" src="./images/1.jpeg" alt="MJ1">
+        <img class="back-face" src="./images/eyez.jpeg" alt="MJeyes">
+    </div>
+    
+    <div class="cards">
+        <img class="front-face" src="./images/2.jpeg" alt="MJ1">
+        <img class="back-face" src="./images/eyez.jpeg" alt="MJeyes">
+    </div>
+    <div class="cards">
+        <img class="front-face" src="./images/3.jpeg" alt="MJ2">
+        <img class="back-face" src="./images/eyez.jpeg" alt="MJeyes">
+    </div>
+    <div class="cards">
+        <img class="front-face" src="./images/4.jpeg" alt="MJ2">
+        <img class="back-face" src="./images/eyez.jpeg" alt="MJeyes">
+    </div>
+    <div class="cards">
+        <img class="front-face" src="./images/5.jpeg" alt="MJ3">
+        <img class="back-face" src="./images/eyez.jpeg" alt="MJeyes">
+    </div>
+    <div class="cards">
+        <img class="front-face" src="./images/6.jpeg" alt="MJ3">
+        <img class="back-face" src="./images/eyez.jpeg" alt="MJeyes">
+    </div>
+    <div class="cards">
+        <img class="front-face" src="./images/2.jpeg" alt="MJ4">
+        <img class="back-face" src="./images/eyez.jpeg" alt="MJeyes">
+    </div>
+    <div class="cards">
+        <img class="front-face" src="./images/5.jpeg" alt="MJ4">
+        <img class="back-face" src="./images/eyez.jpeg" alt="MJeyes">
+    </div>
+    <div class="cards">
+        <img class="front-face" src="./images/4.jpeg" alt="MJ5">
+        <img class="back-face" src="./images/eyez.jpeg" alt="MJeyes">
+    </div>
+    <div class="cards">
+        <img class="front-face" src="./images/6.jpeg" alt="MJ5">
+        <img class="back-face" src="./images/eyez.jpeg" alt="MJeyes">
+    </div>
+    <div class="cards">
+        <img class="front-face" src="./images/1.jpeg" alt="MJ6">
+        <img class="back-face" src="./images/eyez.jpeg" alt="MJeyes">
+    </div>
+    <div class="cards">
+        <img class="front-face" src="./images/3.jpeg" alt="MJ6">
+        <img class="back-face" src="./images/eyez.jpeg" alt="MJeyes">
+    </div> -->
+        </div>
+
+        <!-- loose/win message modal -->
+        <section id="memory--end-game-modal" class="valign-table modal">
+            <div class="valign-cell">
+                <div class="wrapper">
+                    <h2 id="memory--end-game-message"></h2>
+                    <button onclick="hideMessageModal()">Back</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- setting modal  -->
+        <section id="memory--settings-modal" class="valign-table modal show" >
+            <div class="valign-cell">
+              <form>
+                <h2 class="memory--settings-label">Enter your name:</h2>
+                <input id="name" type="text" />
+                <h2 class="memory--settings-label">Select Difficulty level:</h2>
+                <select id="memory--settings-grid">
+                  <option value="60"selected>Easy</option>
+                  <option value="15">Hard</option>
+                 
+                </select>
+                <input id="memory--settings-reset" type="submit" value="Start New Game"  />
+              </form>
+            </div>
+          </section>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
